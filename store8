@@ -1,0 +1,1101 @@
+
+
+sub More_Country_Initialize
+{
+
+=begin comment
+
+%hosts=("base" => "http://localhost/market",
+               "albuquerque" => "http://localhost/market",
+                 "altanta"        => "http://localhost/market",
+                    "austin"      => "http://localhost/market",
+              "baltimore"      => "http://localhost/market",
+              "boston"           => "http://localhost/market",
+               "charlotte"       => "http://localhost/market",
+                "chicago"        => "http://localhost/market",
+             "cincinnati"        => "http://localhost/market",
+              "cleveland"        => "http://localhost/market",
+              "columbus"       => "http://localhost/market",
+           "dallasftworth"    => "http://localhost/market",
+         "denverboulder"    => "http://localhost/market",
+                    "detroit"     => "http://localhost/market",
+                  "houston"     => "http://localhost/market",
+            "indianapolis"    => "http://localhost/market",
+                    "kc"            => "http://localhost/market",
+             "lasvegas"         => "http://localhost/market",
+            "littlerock"         => "http://localhost/market",
+             "losangeles"      => "http://localhost/market",
+              "memphis"       => "http://localhost/market",
+                  "miami"       => "http://localhost/market",
+           "milwaukee"       => "http://localhost/market",
+"minneapolisstpaul"      => "http://localhost/market",
+               "montreal"      => "http://localhost/market",
+               "nashville"      => "http://localhost/market",
+              "newhaven"     => "http://localhost/market",
+               "newyork"      => "http://localhost/market",
+       "oklahomacity"      => "http://localhost/market",
+                "orlando"     => "http://localhost/market",
+                  "ottawa"     => "http://localhost/market",
+         "philadelphia"     => "http://localhost/market",
+                "phoenix"     => "http://localhost/market",
+             "pittsburgh"    => "http://localhost/market",
+             "portland"       => "http://localhost/market",
+          "puertorico"       => "http://localhost/market",
+"raleighdurhamchapelhill" => "http://localhost/market",
+           "renotahoe"          => "http://localhost/market",
+            "rochester"          => "http://localhost/market",
+         "sacramento"          => "http://localhost/market",
+         "saltlakecity"         => "http://localhost/market",
+          "sanantonio"       => "http://localhost/market",
+             "sandiego"        => "http://localhost/market",
+       "sanfrancisco"        => "http://localhost/market",
+               "sanjose"        => "http://localhost/market",
+                "santafe"       => "http://localhost/market",
+                 "seattle"       => "http://localhost/market",
+              "spokane"       => "http://localhost/market",
+                "stlouis"       => "http://localhost/market",
+                 "tampa"       => "http://localhost/market",
+               "toronto"       => "http://localhost/market",
+                "tucson"       => "http://localhost/market",
+          "vancouver"       => "http://localhost/market",
+     "washingtondc"      => "http://localhost/market",
+         "wilmington"      => "http://localhost/market",
+   );
+
+
+%cookiedomains= ("base" =>"",
+               "albuquerque" =>"",
+                 "altanta"        =>"",
+                    "austin"      =>"",
+              "baltimore"      =>"",
+              "boston"           =>"",
+               "charlotte"       =>"",
+                "chicago"        =>"",
+             "cincinnati"        =>"",
+              "cleveland"        =>"",
+              "columbus"       =>"",
+           "dallasftworth"    =>"",
+         "denverboulder"    =>"",
+                    "detroit"     =>"",
+                  "houston"     =>"",
+            "indianapolis"    =>"",
+                    "kc"            =>"",
+             "lasvegas"         =>"",
+            "littlerock"         =>"",
+             "losangeles"      =>"",
+              "memphis"       =>"",
+                  "miami"       =>"",
+           "milwaukee"       =>"",
+"minneapolisstpaul"      =>"",
+               "montreal"      =>"",
+               "nashville"      =>"",
+              "newhaven"     =>"",
+               "newyork"      =>"",
+       "oklahomacity"      =>"",
+                "orlando"     =>"",
+                  "ottawa"     =>"",
+         "philadelphia"     =>"",
+                "phoenix"     =>"",
+             "pittsburgh"    =>"",
+             "portland"       =>"",
+          "puertorico"       =>"",
+"raleighdurhamchapelhill" =>"",
+           "renotahoe"          =>"",
+            "rochester"          =>"",
+         "sacramento"          =>"",
+         "saltlakecity"         =>"",
+          "sanantonio"        =>"",
+             "sandiego"        =>"",
+       "sanfrancisco"        =>"",
+               "sanjose"        =>"",
+                "santafe"       =>"",
+                 "seattle"       =>"",
+              "spokane"       =>"",
+                "stlouis"       =>"",
+                 "tampa"       =>"",
+               "toronto"       =>"",
+                "tucson"       =>"",
+          "vancouver"       =>"",
+     "washingtondc"     =>"",
+         "wilmington"      =>"",
+);
+
+%cookiepaths= ( "base" =>"",
+               "albuquerque" =>"",
+                 "altanta"        =>"",
+                    "austin"      =>"",
+              "baltimore"      =>"",
+              "boston"           =>"",
+               "charlotte"       =>"",
+                "chicago"        =>"",
+             "cincinnati"        =>"",
+              "cleveland"        =>"",
+              "columbus"       =>"",
+           "dallasftworth"    =>"",
+         "denverboulder"    =>"",
+                    "detroit"     =>"",
+                  "houston"     =>"",
+            "indianapolis"    =>"",
+                    "kc"            =>"",
+             "lasvegas"         =>"",
+            "littlerock"         =>"",
+             "losangeles"      =>"",
+              "memphis"       =>"",
+                  "miami"       =>"",
+           "milwaukee"       =>"",
+"minneapolisstpaul"      =>"",
+               "montreal"      =>"",
+               "nashville"      =>"",
+              "newhaven"     =>"",
+               "newyork"      =>"",
+       "oklahomacity"      =>"",
+                "orlando"     =>"",
+                  "ottawa"     =>"",
+         "philadelphia"     =>"",
+                "phoenix"     =>"",
+             "pittsburgh"    =>"",
+             "portland"       =>"",
+          "puertorico"       =>"",
+"raleighdurhamchapelhill" =>"",
+           "renotahoe"          =>"",
+            "rochester"          =>"",
+         "sacramento"          =>"",
+         "saltlakecity"         =>"",
+          "sanantonio"        =>"",
+             "sandiego"        =>"",
+       "sanfrancisco"        =>"",
+               "sanjose"        =>"",
+                "santafe"       =>"",
+                 "seattle"       =>"",
+              "spokane"       =>"",
+                "stlouis"       =>"",
+                 "tampa"       =>"",
+               "toronto"       =>"",
+                "tucson"       =>"",
+          "vancouver"       =>"",
+     "washingtondc"     =>"",
+         "wilmington"      =>"",
+);
+
+
+=end comment
+=cut
+
+
+%hosts=( "base" => "http://www.umkcsce.info",
+               "albuquerque" => "http://www.umkcsce.info",
+                 "altanta"        => "http://www.umkcsce.info",
+                    "austin"      => "http://www.umkcsce.info",
+              "baltimore"      => "http://www.umkcsce.info",
+              "boston"          => "http://www.umkcsce.info",
+               "charlotte"      => "http://www.umkcsce.info",
+                "chicago"       => "http://www.umkcsce.info",
+             "cincinnati"       => "http://www.umkcsce.info",
+              "cleveland"      => "http://www.umkcsce.info",
+              "columbus"      => "http://www.umkcsce.info",
+           "dallasftworth"   => "http://www.umkcsce.info",
+         "denverboulder"    => "http://www.umkcsce.info",
+                    "detroit"     => "http://www.umkcsce.info",
+                  "houston"     => "http://www.umkcsce.info",
+            "indianapolis"    => "http://www.umkcsce.info",
+                    "kc"            => "http://www.umkcsce.info",
+             "lasvegas"         => "http://www.umkcsce.info",
+            "littlerock"         =>"http://www.umkcsce.info",
+             "losangeles"      => "http://www.umkcsce.info",
+              "memphis"       => "http://www.umkcsce.info",
+                  "miami"       => "http://www.umkcsce.info",
+           "milwaukee"       => "http://www.umkcsce.info",
+"minneapolisstpaul"      => "http://www.umkcsce.info",
+               "montreal"      => "http://www.umkcsce.info",
+               "nashville"      => "http://www.umkcsce.info",
+              "newhaven"    => "http://www.umkcsce.info",
+               "newyork"      => "http://www.umkcsce.info",
+       "oklahomacity"      => "http://www.umkcsce.info",
+                "orlando"     => "http://www.umkcsce.info",
+                  "ottawa"     => "http://www.umkcsce.info",
+         "philadelphia"     => "http://www.umkcsce.info",
+                "phoenix"     => "http://www.umkcsce.info",
+             "pittsburgh"    => "http://www.umkcsce.info",
+             "portland"       => "http://www.umkcsce.info",
+          "puertorico"       => "http://www.umkcsce.info",
+"raleighdurhamchapelhill" => "http://www.umkcsce.info",
+           "renotahoe"          => "http://www.umkcsce.info",
+            "rochester"          => "http://www.umkcsce.info",
+         "sacramento"          => "http://www.umkcsce.info",
+         "saltlakecity"         => "http://www.umkcsce.info",
+          "sanantonio"        => "http://www.umkcsce.info",
+             "sandiego"        => "http://www.umkcsce.info",
+       "sanfrancisco"        => "http://www.umkcsce.info",
+               "sanjose"        => "http://www.umkcsce.info",
+                "santafe"       => "http://www.umkcsce.info",
+                 "seattle"       => "http://www.umkcsce.info",
+              "spokane"       => "http://www.umkcsce.info",
+                "stlouis"       => "http://www.umkcsce.info",
+                 "tampa"       => "http://www.umkcsce.info",
+               "toronto"       => "http://www.umkcsce.info",
+                "tucson"       => "http://www.umkcsce.info",
+          "vancouver"       => "http://www.umkcsce.info",
+     "washingtondc"     => "http://www.umkcsce.info",
+         "wilmington"      => "http://www.umkcsce.info",
+);
+
+
+
+%cookiedomains=("base" => ";domain=www.umkcsce.info",
+               "albuquerque" => ";domain=www.umkcsce.info",
+                 "altanta"       => ";domain=www.umkcsce.info",
+                    "austin"      => ";domain=www.umkcsce.info",
+              "baltimore"      => ";domain=www.umkcsce.info",
+              "boston"           => ";domain=www.umkcsce.info",
+               "charlotte"       => ";domain=www.umkcsce.info",
+                "chicago"        => ";domain=www.umkcsce.info",
+             "cincinnati"        => ";domain=www.umkcsce.info",
+              "cleveland"        => ";domain=www.umkcsce.info",
+              "columbus"       => ";domain=www.umkcsce.info",
+           "dallasftworth"    => ";domain=www.umkcsce.info",
+         "denverboulder"    => ";domain=www.umkcsce.info",
+                    "detroit"     => ";domain=www.umkcsce.info",
+                  "houston"     => ";domain=www.umkcsce.info",
+            "indianapolis"    => ";domain=www.umkcsce.info",
+                    "kc"            => ";domain=www.umkcsce.info",
+             "lasvegas"         => ";domain=www.umkcsce.info",
+            "littlerock"         => ";domain=www.umkcsce.info",
+             "losangeles"      => ";domain=www.umkcsce.info",
+              "memphis"       => ";domain=www.umkcsce.info",
+                  "miami"       => ";domain=www.umkcsce.info",
+           "milwaukee"       => ";domain=www.umkcsce.info",
+"minneapolisstpaul"      => ";domain=www.umkcsce.info",
+               "montreal"      => ";domain=www.umkcsce.info",
+               "nashville"     => ";domain=www.umkcsce.info",
+              "newhaven"     => ";domain=www.umkcsce.info",
+               "newyork"      => ";domain=www.umkcsce.info",
+       "oklahomacity"      => ";domain=www.umkcsce.info",
+                "orlando"     => ";domain=www.umkcsce.info",
+                  "ottawa"     => ";domain=www.umkcsce.info",
+         "philadelphia"     => ";domain=www.umkcsce.info",
+                "phoenix"     => ";domain=www.umkcsce.info",
+             "pittsburgh"    => ";domain=www.umkcsce.info",
+             "portland"       => ";domain=www.umkcsce.info",
+          "puertorico"       => ";domain=www.umkcsce.info",
+"raleighdurhamchapelhill" => ";domain=www.umkcsce.info",
+           "renotahoe"          => ";domain=www.umkcsce.info",
+            "rochester"          => ";domain=www.umkcsce.info",
+         "sacramento"          => ";domain=www.umkcsce.info",
+         "saltlakecity"         => ";domain=www.umkcsce.info",
+          "sanantonio"        => ";domain=www.umkcsce.info",
+             "sandiego"        => ";domain=www.umkcsce.info",
+       "sanfrancisco"        => ";domain=www.umkcsce.info",
+               "sanjose"        => ";domain=www.umkcsce.info",
+                "santafe"       => ";domain=www.umkcsce.info",
+                 "seattle"       => ";domain=www.umkcsce.info",
+              "spokane"       => ";domain=www.umkcsce.info",
+                "stlouis"       => ";domain=www.umkcsce.info",
+                 "tampa"       => ";domain=www.umkcsce.info",
+               "toronto"       => ";domain=www.umkcsce.info",
+                "tucson"       => ";domain=www.umkcsce.info",
+          "vancouver"       => ";domain=www.umkcsce.info",
+     "washingtondc"     => ";domain=www.umkcsce.info",
+         "wilmington"      => ";domain=www.umkcsce.info",
+ );
+
+
+%cookiepaths= ("base"  =>  ";path=/",
+               "albuquerque" =>  ";path=/",
+                 "altanta"        =>  ";path=/",
+                    "austin"      =>  ";path=/",
+              "baltimore"      =>  ";path=/",
+              "boston"           =>  ";path=/",
+               "charlotte"       =>  ";path=/",
+                "chicago"        =>  ";path=/",
+             "cincinnati"        =>  ";path=/",
+              "cleveland"       =>  ";path=/",
+              "columbus"       =>  ";path=/",
+           "dallasftworth"    =>  ";path=/",
+         "denverboulder"    =>  ";path=/",
+                    "detroit"     =>  ";path=/",
+                  "houston"     =>  ";path=/",
+            "indianapolis"    =>  ";path=/",
+                    "kc"            =>  ";path=/",
+             "lasvegas"         =>  ";path=/",
+            "littlerock"         =>  ";path=/",
+             "losangeles"      =>  ";path=/",
+              "memphis"       =>  ";path=/",
+                  "miami"       =>  ";path=/",
+           "milwaukee"       =>  ";path=/",
+"minneapolisstpaul"      =>  ";path=/",
+               "montreal"      =>  ";path=/",
+               "nashville"      =>  ";path=/",
+              "newhaven"     =>  ";path=/",
+               "newyork"      =>  ";path=/",
+       "oklahomacity"      =>  ";path=/",
+                "orlando"     =>  ";path=/",
+                  "ottawa"     =>  ";path=/",
+         "philadelphia"     =>  ";path=/",
+                "phoenix"     =>  ";path=/",
+             "pittsburgh"    =>  ";path=/",
+             "portland"       =>  ";path=/",
+          "puertorico"       =>  ";path=/",
+"raleighdurhamchapelhill" =>  ";path=/",
+           "renotahoe"          =>  ";path=/",
+            "rochester"          =>  ";path=/",
+         "sacramento"          =>  ";path=/",
+         "saltlakecity"         =>  ";path=/",
+          "sanantonio"        =>  ";path=/",
+             "sandiego"        =>  ";path=/",
+       "sanfrancisco"        =>  ";path=/",
+               "sanjose"        =>  ";path=/",
+                "santafe"       =>  ";path=/",
+                 "seattle"       =>  ";path=/",
+              "spokane"       =>  ";path=/",
+                "stlouis"       =>  ";path=/",
+                 "tampa"       =>  ";path=/",
+               "toronto"       =>  ";path=/",
+                "tucson"       =>  ";path=/",
+          "vancouver"       =>  ";path=/",
+     "washingtondc"     =>  ";path=/",
+         "wilmington"      =>  ";path=/",
+   );
+
+
+
+#$fileprefix: product files, $httpprefix: common include, $dbprefix: db files.
+#imageprefix: product images, $codeprefix: cgi-bin.
+
+$fileprefix =  "../../../serverdata/market/classify";
+$imageprefix = "../image";
+$opprefix = "../../../serverdata/market/marketop";
+$opimageprefix = "../marketop";
+$codeprefix="/cgi-bin/";
+
+$customerdirectory = "test";
+$purchasedirectory = "test";
+
+#$emailprefix was originally the same as $httpprefix. It is used now 
+#to override the browser's blocking setting. Currently only used in b1done.pl
+$emailprefix = "http://www.university.uphero.com";
+
+#$fileprefix = "../httpdocs/autoop";
+#$httpprefix = "../autoop";
+
+}
+
+
+sub Country_Initialize
+{
+local (*in) = shift if @_;    # CGI input
+
+
+#@cities=("albuquerque", "altanta", "austin", "baltimore", "boston", "charlotte", "chicago", "cincinnati", 
+#"cleveland", "columbus", "dallasftworth", "denverboulder", "detroit", "houston", 
+#"indianapolis", "kc", "lasvegas", "littlerock", "losangeles", "memphis", "miami",
+#"milwaukee", "minneapolisstpaul", "montreal", "nashville", "newhaven", "newyork", "oklahomacity", #"orlando", 
+#"ottawa", "philadelphia", "phoenix", "pittsburgh", "portland", "puertorico", "raleighdurhamchapelhill", #"renotahoe", "rochester", "sacramento", "saltlakecity", "sanantonio", "sandiego", "sanfrancisco", "sanjose", #"santafe", "seattle", "spokane", "stlouis", "tampa", "toronto", "tucson", 
+#"vancouver", "washingtondc", "wilmington");
+
+@cities=("chicago", "kc", "stlouis", "washingtondc");
+
+#@cityname=("Albuquerque", "Atlanta", "Austin", "Baltimore", "Boston", "Charlotte", "Chicago", #"Cincinnati", "Cleveland", "Columbus", "Dallas/Ft. Worth", "Denver/Boulder", "Detroit", "Houston", 
+#"Indianapolis", "Kansas City", "Las Vegas", "Little Rock", "Los Angeles", "Memphis", "Miami",
+#"Milwaukee", "Minneapolis/St Paul", "Montreal", "Nashville", "New Haven", "New York", "Oklahoma #City", "Orlando", "Ottawa", "Philadelphia", "Phoenix", "Pittsburgh", "Portland", "Puerto Rico", "Raleigh-#Durham-Chapel Hill", "Reno/Tahoe", "Rochester", "Sacramento", "Salt Lake City", "San Antonio", "San #Diego", "San Francisco", "San Jose", "Santa Fe", "Seattle", "Spokane", "St. Louis", "Tampa", "Toronto", #"Tucson", 
+#"Vancouver", "Washington DC", "Wilmington");
+
+@cityname=("$lang{'Chicago'}", "$lang{'Kansas City'}", "$lang{'St. Louis'}", "$lang{'Washington D.C.'}");
+
+######End Auto Work Section, Start Common Section
+
+@provincestatearr =("NA", 
+                   "Other",
+                   "Washington DC",
+                   "AB",                          #  <!-- Alberta -->
+                   "AL",                          #  <!-- Alabama -->
+                   "AK",                          #  <!-- Alaska -->
+                   "AR",                           #  <!-- Arkansas -->
+                   "AZ",                           #  <!-- Arizona -->
+                   "BC",                           #  <!-- British Columbia -->
+                   "CA",                           #  <!-- California -->
+                   "CO",                           #  <!-- Colorado -->
+                   "CT",                           #  <!-- Connecticut -->
+                   "DE",                           #  <!-- Delaware -->
+                   "FL",                            # <!-- Florida -->
+                   "GA",                           #  <!-- Georgia -->
+                   "HI",                            #  <!--Hawaii -->
+                   "IA",                            #   <!-- Iowa -->
+                   "ID",                            #   <!-- Idaho -->
+                   "IL",                             #   <!-- Illinois -->
+                   "IN",                             # <!-- Indiana -->
+                   "KS",                            # <!-- Kansas --> 
+                   "KY",                           # <!-- Kentucky -->
+                   "LA",                            #  <!-- Louisiana -->
+                   "MA",                           #  <!-- Massachusetts -->
+                   "MB",                           #  <!-- Manitoba -->
+                    "MD",                          #  <!-- Maryland -->
+                    "ME",                          #   <!-- Maine -->
+                    "MI",                           #    <!-- Michigan -->
+                    "MN",                         #  <!-- Minnesota -->
+                    "MO",                         #   <!-- Missouri -->
+                    "MS",                          #   <!-- Mississippi -->
+                    "MT",                          #  <!-- Montana  -->
+                    "NB",                          #   <!-- New Brunswick -->
+                    "NC",                          #   <!-- North Carolina -->
+                    "ND",                          #  <!-- North Dakota -->
+                    "NE",                          #  <!-- Nebraska --> 
+                    "NF",                          #  <!-- Newfoundland -->
+                    "NH",                         # <!-- New Hampshire -->
+                    "NJ",                          #   <!-- New Jersy -->
+                    "NM",                        #  <!-- New Mexico -->
+                    "NT",                         #   <!-- Northwest Territories -->
+                    "NS",                         #   <!-- Nova Scotia -->
+                    "NV",                         #  <!-- Nevada -->
+                    "NY",                         #  <!-- New York -->
+                    "OH",                         #  <!-- Ohio -->
+                    "OK",                         # <!-- Oklahoma --> 
+                    "ON",                         # <!-- Ontario -->
+                    "OR",                         #  <!-- Oregan -->
+                    "PA",                         #   <!-- Pennsylvania --> 
+                    "PE",                          #  <!-- Prince Edward Island -->
+                    "PQ",                         #   <!-- Quebec -->
+                    "RI",                          #   <!-- Phode Island -->
+                    "SC",                         #   <!-- South Carolina --> 
+                    "SD",                         #   <!-- South Dakota -->
+                    "SK",                         #   <!-- Saskatchewan -->
+                    "TN",                         #   <!-- Tennessee -->
+                    "TX",                         #   <!-- Texas -->
+                    "UT",                         #  <!-- Utah -->
+                    "VA",                        #   <!-- Virginia -->
+                    "VT",                         #   <!-- Vermont -->
+                    "WA",                        #  <!-- Washington -->
+                    "WI",                         #   <!-- Wisconsin -->
+                    "WV",                       #  <!-- West Virginia -->
+                    "WY",                       #  <!-- Wyoming -->
+                    "YK"                         #  <!-- Yukon -->
+);
+
+
+@classifyarrayname=("$lang{'Cereal, Noodle, Rice'}", "$lang{'Dry Goods'}", "$lang{'Oil, Salt, Sugar, Wine, Vinegar'}", "$lang{'Sauces'}", 
+"$lang{'Seasoning, Spices'}", "$lang{'Baking Goods'}",  
+"$lang{'Tea, Cookie, Candy, Desserts'}",  "$lang{'Fresh Produce'}", "$lang{'Pork'}", "$lang{'Beef'}", "$lang{'Poultry'}", "$lang{'Sea Food'}", "$lang{'Canned Products'}", "$lang{'Refrigerated Products'}", 
+"$lang{'Frozen Products'}", "$lang{'Health Products'}", "$lang{'Grocery'}", "$lang{'Tableware'}", "$lang{'Disposable Products'}", "$lang{'Kitchen Equipment'}");
+
+
+@classifyarray=("cerealnoodlerice", "drygoods", "oilsaltsugarwinevinegar", "sauces", "seasoningspices", "bakinggoods", "teacookiecandydesserts", "freshproduce",  "pork", "beef", 
+"poultry", "seafood", "cannedproducts", "refrigeratedproducts", "frozenproducts", "healthproducts", "grocery", "tableware", "disposableproducts", "kitchenequipment");
+
+$defaultclassifyarrayname="$lang{'Cereal, Noodle, Rice'}";
+$defaultclassifyarray="cerealnoodlerice";
+
+%categoryarray=("cerealnoodlerice" => ["rice", 
+                                       "kokuhorice",
+                                       "jasminerice",
+                                       "sweetrice",
+                                       "noodles",
+                                       "eggnoodles",
+                                       "chowmein",
+                                       "ricestickbeanthread"],
+
+                "drygoods" =>  ["fortunecookies", 
+                                "almondcookies",
+                                "driedmushroomfungus",
+                                "peanutsalmond",
+                                "cashewnut",
+                                "sesameseed",
+                                "bean"],
+
+                "oilsaltsugarwinevinegar" => ["oilshortening", 
+                                                   "salt", 
+                                                   "sugar", 
+                                                   "cookingwine", 
+                                                   "vinegar",
+                                                   "soysauce"],
+
+                "sauces" => ["hoisinsauce", 
+                            "oystersauce", 
+                            "tomatoketchup", 
+                            "bbqsauce", 
+                            "chilisauce", 
+                            "beansauce", 
+                            "sweetsauce",
+                            "ducksauceplumsauce"], 
+
+       "seasoningspices"=> ["msg", "garlic", "chili", 
+                            "peppers", "mustard", "otherseasoning"],
+
+          "bakinggoods" => ["bakingpowdersoda", 
+                            "battermixbreadcrumb", 
+                            "cornstarch",
+                            "flour",
+                            "foodcolor"],
+
+          "teacookiecandydesserts" => ["tea", 
+                            "chips",
+                            "cake",
+                            "gelatin", 
+                            "pudding",
+                            "drinks"],
+
+          "freshproduce"=> ["vegetables", "freshfruits"] ,
+
+          "pork" => ["pork"],
+ 
+          "beef" => ["beef"],
+
+          "poultry" => ["chicken", "duck"],
+
+               "seafood"  =>  ["fish", "shrimp", "lobster", "crab", "squid", "mussel", "boiledcrawfish", 
+                               "crabmeat", "scallop", "peeledshrimp",  
+                               "tigershrimp", "whiteshrimp", "other"],
+
+        "cannedproducts"  => ["bamboo", "babycorn", "waterchestnut", 
+                              "cannedmushroomstrawmushroom", "fruit", "vegetable"],
+ 
+  "refrigeratedproducts"  => ["milk", "eggs", "ricenoodle", "sausage",  "tofu", "tofudessert"],
+
+        "frozenproducts"  => ["vegetables", "icecream", "eggrollskin", "wontonskin", "mooshuwrappers", "dumplingskin", "eggroll", "dumpling", "creamcheese", "fishball", "buns"],
+
+        "healthproducts" => ["tonic"],
+
+               "grocery"  =>  ["cannedpreservedvegetables", "baggedvegetables", "grocery", "yeast"],
+
+             "tableware"  =>  ["plastichardware", "chopsticks", "toothpick", "placemats"],
+
+    "disposableproducts"  =>   ["aluminumfoil", 
+                                "waxpaper", 
+                                "sealwrapper",
+                                "guestcheckbook",
+                                "napkins",
+                                "papertowelstoilettissue",
+                                "toilettissue"],
+
+      "kitchenequipment"    =>    ["cleaningdetergent", 
+                                   "cleaningproducts", 
+                                   "shovel", 
+                                   "ladles",
+                                   "cantonesesteelwok",
+                                   "mandarinwok",
+                                   "bambooskimmers",
+                                   "colander",
+                                   "strainer",
+                                   "wokcover",
+                                   "bambooskewer",
+                                   "jetburner",
+                                   "jetburnerhead",
+                                   "steamer",
+                                   "ricecooker",
+                                   "cutter",
+                                   "sterno",
+                                   "kitchenaccessories",
+                                   "stoveaccessaries"],
+                        
+);
+
+%defaultcategoryarray=("cerealnoodlerice" => ["rice"],
+
+                "drygoods" =>  ["fortunecookies"],
+
+                "oilsaltsugarwinevinegar" => ["salt"],
+
+                "sauces" => ["beansauce"], 
+
+       "seasoningspices"=> ["peppers"],
+
+          "bakinggoods" => ["flour"],
+
+          "teacookiecandydesserts" => ["tea"], 
+
+          "freshproduce"=> ["vegetables"],
+
+          "pork" => ["pork"],
+ 
+          "beef" => ["beef"],
+
+          "poultry" => ["chicken"],
+
+               "seafood"  =>  ["fish"], 
+
+        "cannedproducts"  => ["fruit"],
+ 
+  "refrigeratedproducts"  => ["milk"], 
+
+        "frozenproducts"  => ["icecream"], 
+
+        "healthproducts" => ["tonic"],
+
+               "grocery"  =>  ["cannedpreservedvegetables"], 
+
+             "tableware"  =>  ["plastichardware"], 
+
+    "disposableproducts"  =>   ["aluminumfoil"], 
+
+      "kitchenequipment"    =>    ["kitchenaccessories"],
+                        
+);
+
+%categoryarrayname=("cerealnoodlerice" => ["$lang{'Rice'}", 
+                                       "$lang{'Kokuho Rice'}",
+                                       "$lang{'Jasmine Rice'}",
+                                       "$lang{'Sweet Rice'}",
+                                       "$lang{'Noodles'}",
+                                       "$lang{'Egg Noodles'}",
+                                       "$lang{'Chow Mein'}",
+                                       "$lang{'Rice Stick & Bean Thread'}"],
+
+                "drygoods" =>  ["$lang{'Fortune Cookies'}", 
+                                "$lang{'Almond Cookies'}",
+                                "$lang{'Dried Mushroom & Fungus'}",
+                                "$lang{'Peanuts & Almond'}",
+                                "$lang{'Cashewnut'}",
+                                "$lang{'Sesame Seed'}",
+                                "$lang{'Bean'}"],
+
+                "oilsaltsugarwinevinegar" => ["$lang{'Oil & Shortening'}", 
+                                                   "$lang{'Salt'}", 
+                                                   "$lang{'Sugar'}", 
+                                                   "$lang{'Cooking Wine'}", 
+                                                   "$lang{'Vinegar'}",
+                                                   "$lang{'Soy Sauce'}"],
+
+                "sauces" => ["$lang{'Hoisin Sauce'}", 
+                            "$lang{'Oyster Sauce'}", 
+                            "$lang{'Tomato & Ketchup'}", 
+                            "$lang{'BBQ Sauce'}", 
+                            "$lang{'Chili Sauce'}", 
+                            "$lang{'Bean Sauce'}", 
+                            "$lang{'Sweet Sauce'}",
+                            "$lang{'Duck Sauce & Plum Sauce'}"], 
+
+       "seasoningspices"=> ["$lang{'MSG'}", "$lang{'Garlic'}", "$lang{'Chili'}", 
+                            "$lang{'Peppers'}", "$lang{'Mustard'}", "$lang{'Other Seasoning'}"],
+	
+          "bakinggoods" => ["$lang{'Baking Powder & Soda'}", 
+                            "$lang{'Batter Mix & Bread Crumb'}", 
+                            "$lang{'Corn Starch'}",
+                            "$lang{'Flour'}",
+                            "$lang{'Food Color'}"],
+
+          "teacookiecandydesserts" => ["$lang{'Tea'}",
+                            "$lang{'Chips'}",  
+                            "$lang{'Cake'}",
+                            "$lang{'Gelatin'}",
+                            "$lang{'Pudding'}", 
+                            "$lang{'Drinks'}"],
+
+          "freshproduce"=> ["$lang{'Vegetables'}", "$lang{'Fresh Fruits'}"] ,
+
+          "pork" => ["$lang{'Pork'}"],
+
+          "beef" => ["$lang{'Beef'}"],
+
+          "poultry" => ["$lang{'Chicken'}", "$lang{'Duck'}"],
+
+               "seafood"  =>  ["$lang{'Fish'}", "$lang{'Shrimp'}", "$lang{'Lobster'}", "$lang{'Crab'}", 
+                               "$lang{'Squid'}", "$lang{'Mussel'}", 
+                               "$lang{'Boiled Crawfish'}", 
+                               "$lang{'Crabmeat'}", "$lang{'Scallop'}", 
+                               "$lang{'Peeled Shrimp'}",  
+                               "$lang{'Tiger Shrimp'}", 
+                               "$lang{'White Shrimp'}", "$lang{'Other'}"],
+
+        "cannedproducts"  => ["$lang{'Bamboo'}", "$lang{'Baby Corn'}", "$lang{'Waterchestnut'}", 
+                              "$lang{'Canned Mushroom & Straw Mushroom'}", "$lang{'Fruit'}", "$lang{'Vegetable'}"],
+ 
+  "refrigeratedproducts"  => ["$lang{'Milk'}", "$lang{'Eggs'}", "$lang{'Rice noodle'}", "$lang{'Sausage'}",  "$lang{'Tofu'}", "$lang{'Tofu Dessert'}"],
+
+        "frozenproducts"  => ["$lang{'Vegetables'}", "$lang{'Ice Cream'}", "$lang{'Eggroll Skin'}", "$lang{'Wonton Skin'}", "$lang{'Moo Shu Wrappers'}", "$lang{'Dumpling Skin'}", "$lang{'Egg Roll'}", "$lang{'Dumpling'}", "$lang{'Cream Cheese'}", "$lang{'Fish Ball'}", "$lang{'Buns'}"],
+
+        "healthproducts" => ["$lang{'Tonic Products'}"],
+
+               "grocery"  =>  ["$lang{'Canned Preserved Vegetables'}", "$lang{'Bagged Vegetables'}", "$lang{'Grocery'}", "$lang{'Yeast'}"],
+
+             "tableware"  =>  ["$lang{'Plastic Hardware'}", "$lang{'Chopsticks'}", "$lang{'Toothpick'}", "$lang{'Place Mats'}"],
+
+    "disposableproducts"  =>   ["$lang{'Aluminum Foil'}", 
+                                "$lang{'Waxpaper'}", 
+                                "$lang{'Seal Wrapper'}",
+                                "$lang{'Guest Checkbook'}",
+                                "$lang{'Napkins'}",
+                                "$lang{'Paper Towels & Toilet Tissue'}",
+                                "$lang{'Toilet Tissue'}"],
+
+      "kitchenequipment"    =>    ["$lang{'Cleaning Detergent'}", 
+                                   "$lang{'Cleaning Products'}", 
+                                   "$lang{'Shovel'}", 
+                                   "$lang{'Ladles'}",
+                                   "$lang{'Cantonese Steel Wok'}",
+                                   "$lang{'Mandarin Wok'}",
+                                   "$lang{'Bamboo Skimmers'}",
+                                   "$lang{'Colander'}",
+                                   "$lang{'Strainer'}",
+                                   "$lang{'Wok Cover'}",
+                                   "$lang{'Bamboo Skewer'}",
+                                   "$lang{'Jet Burner'}",
+                                   "$lang{'Jet Burner Head'}",
+                                   "$lang{'Steamer'}",
+                                   "$lang{'Rice Cooker'}",
+                                   "$lang{'Cutter'}",
+                                   "$lang{'Sterno'}",
+                                   "$lang{'Kitchen Accessories'}",
+                                   "$lang{'Stove Accessaries'}"],
+                        
+);
+
+%categoryarrayattri=("cerealnoodlerice" => {"rice" => ["_productionplace", "_productiondate", "_expirationdate"], 
+                                       "kokuhorice"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                       "jasminerice"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                       "sweetrice"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                       "noodles"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                       "eggnoodles"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                       "chowmein"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                       "ricestickbeanthread"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+                "drygoods" =>  {"fortunecookies"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                "almondcookies"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "driedmushroomfungus"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "peanutsalmond"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "cashewnut"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "sesameseed"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "bean"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+                "oilsaltsugarwinevinegar" => {"oilshortening"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                                   "salt"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                                   "sugar"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                                   "cookingwine"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                                   "vinegar"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                                   "soysauce"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+                "sauces" => {"hoisinsauce"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "oystersauce"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "tomatoketchup"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "bbqsauce"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "chilisauce"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "beansauce"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "sweetsauce"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                            "ducksauceplumsauce"=> ["_productionplace", "_productiondate", "_expirationdate"]}, 
+
+       "seasoningspices"=> {"msg"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "garlic"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "chili"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "peppers"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "mustard"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "otherseasoning"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "bakinggoods" => {"bakingpowdersoda"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "battermixbreadcrumb"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "cornstarch"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                            "flour"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                            "foodcolor"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "teacookiecandydesserts" => {"tea"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "chips" =>["_productionplace", "_productiondate", "_expirationdate"],  
+
+                            "cake"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                            "gelatin"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "pudding"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "drinks"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "freshproduce"=> {"vegetables"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "freshfruits"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "pork" => {"pork" => ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "beef" => {"beef" => ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "poultry" => {"chicken" => ["_productionplace", "_productiondate", "_expirationdate"],
+                        "duck" => ["_productionplace", "_productiondate", "_expirationdate"]},
+
+             "seafood"  => {"fish"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                            "shrimp"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "lobster"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                            "crab"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                           "squid"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                           "mussel"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                          "boiledcrawfish"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                          "crabmeat"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                          "scallop"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                          "peeledshrimp"=> ["_productionplace", "_productiondate", "_expirationdate"],  
+                          "tigershrimp"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                          "whiteshrimp"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                          "other"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+        "cannedproducts"  => {"bamboo"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "babycorn"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "waterchestnut"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "cannedmushroomstrawmushroom"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                              "fruit"=> ["_productionplace", "_productiondate", "_expirationdate"],                                                  "vegetable"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+ 
+  "refrigeratedproducts"  => {
+
+                              "milk"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "eggs"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "ricenoodle"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "sausage"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "tofu"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                              "tofudessert"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+        "frozenproducts"  => {"vegetables"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+
+                             "icecream"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                             "eggrollskin"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                             "wontonskin"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "mooshuwrappers"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "dumplingskin"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "eggroll"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "dumpling"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "creamcheese"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "fishball"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                         "buns"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+          "healthproducts" => {"tonic" => ["_productionplace", "_productiondate", "_expirationdate"]},
+
+               "grocery"  =>  {"cannedpreservedvegetables"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+
+                               "baggedvegetables" => ["_productionplace", "_productiondate", "_expirationdate"], 
+
+                               "grocery"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                               "yeast"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+             "tableware"  =>  {"plastichardware"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                               "chopsticks"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                               "toothpick"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                               "placemats"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+    "disposableproducts"  =>   {"aluminumfoil"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                "waxpaper"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                "sealwrapper"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "guestcheckbook"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "napkins"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "papertowelstoilettissue"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                "toilettissue"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+
+      "kitchenequipment"    =>    {"cleaningdetergent"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                   "cleaningproducts"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                   "shovel"=> ["_productionplace", "_productiondate", "_expirationdate"], 
+                                   "ladles"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "cantonesesteelwok"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "mandarinwok"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "bambooskimmers"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "colander"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "strainer"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "wokcover"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "bambooskewer"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "jetburner"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "jetburnerhead"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "steamer"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "ricecooker"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "cutter"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "sterno"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "kitchenaccessories"=> ["_productionplace", "_productiondate", "_expirationdate"],
+                                   "stoveaccessaries"=> ["_productionplace", "_productiondate", "_expirationdate"]},
+                         
+);
+
+
+%categoryarrayattriname=("cerealnoodlerice" => {"rice" => ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "kokuhorice"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "jasminerice"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "sweetrice"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "noodles"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "eggnoodles"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "chowmein"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                       "ricestickbeanthread"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+                "drygoods" =>  {"fortunecookies"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "almondcookies"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "driedmushroomfungus"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "peanutsalmond"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "cashewnut"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "sesameseed"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "bean"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                "oilsaltsugarwinevinegar" => ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                                   "salt"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                                   "sugar"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                                   "cookingwine"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                                   "vinegar"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                                   "soysauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+                "sauces" => {"hoisinsauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "oystersauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "tomatoketchup"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "bbqsauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "chilisauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "beansauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "sweetsauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "ducksauceplumsauce"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"] },
+
+       "seasoningspices"=> {"msg"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                           "garlic"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "chili"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "peppers"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "mustard"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "otherseasoning"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+          "bakinggoods" => {"bakingpowdersoda"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "battermixbreadcrumb"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                            "cornstarch"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "flour"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                            "foodcolor"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+          "teacookiecandydesserts" => {"tea"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                            "chips"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "cake"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                            "gelatin"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                            "pudding"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                            "drinks"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+          "freshproduce"=> {"vegetables"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "freshfruits"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+             "pork" => {"pork" =>  ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+             "beef" => {"beef" =>  ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+             "poultry" => {"chicken" =>  ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                           "duck" =>  ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+             "seafood"  => {"fish"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                            "shrimp"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                            "lobster"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                            "crab"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+
+                           "squid"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+
+                           "mussel"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+
+                          "boiledcrawfish"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                          "crabmeat"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                          "scallop"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                          "peeledshrimp"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+
+                          "tigershrimp"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                          "whiteshrimp"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                          
+                          "other"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+        "cannedproducts"  => {"bamboo"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                              "babycorn"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "waterchestnut"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "cannedmushroomstrawmushroom"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "fruit"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "vegetable"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+ 
+  "refrigeratedproducts"  => {
+
+                              "milk"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "eggs"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "ricenoodle"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                              "sausage"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+
+                              "tofu"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+                              "tofudessert"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+        "frozenproducts"  => {"vegetables"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                              "icecream"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                              "eggrollskin"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                             "wontonskin"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                         "mooshuwrappers"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                         "dumplingskin"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                         "eggroll"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                         "dumpling"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                         "creamcheese"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                         "fishball"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                         "buns"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+               "healthproducts" => {"tonic" =>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+               "grocery"  =>  {"cannedpreservedvegetables"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"], 
+
+                               "baggedvegetables"=>["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+
+                               "grocery"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                               "yeast"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+             "tableware"  =>  {"plastichardware"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                               "chopsticks"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                               "toothpick"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                               "placemats"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+    "disposableproducts"  =>   {"aluminumfoil"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "waxpaper"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "sealwrapper"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "guestcheckbook"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "napkins"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "papertowelstoilettissue"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                "toilettissue"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+
+      "kitchenequipment"    =>    {"cleaningdetergent"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "cleaningproducts"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "shovel"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "ladles"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "cantonesesteelwok"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "mandarinwok"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "bambooskimmers"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "colander"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "strainer"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "wokcover"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "bambooskewer"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "jetburner"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "jetburnerhead"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "steamer"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "ricecooker"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "cutter"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "sterno"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "kitchenaccessories"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"],
+                                   "stoveaccessaries"=> ["$lang{'Production Place:'}|20|<br><br>", "$lang{'Production Date:'}|15|&nbsp; &nbsp;", "$lang{'Expiration Date:'}|15|<br><br>"]},
+                         
+);
+
+
+@postdurationarray=("$lang{'One Week'}", "$lang{'Two Weeks'}", "$lang{'One Month'}", "$lang{'Two Months'}", "$lang{'Three Months'}" , "$lang{'Six Months'}",  
+                                        "$lang{'One Year'}", "$lang{'Two Years'}", "$lang{'Three Years'}",
+                                        "$lang{'Nonexpire'}");
+
+@postdurationday=("7", "14", "0", "0", "0", "0", "0", "0", "0", "0" );
+
+$defaultpostdurationday= ("0");                 
+
+
+@postdurationmonth=("0", "0", "1", "2", "3", "6", "0", "0", "0", "0" ),
+
+
+$defaultpostdurationmonth="0";
+
+@postdurationyear=("0", "0", "0", "0", "0", "0", "1", "2", "3", "20");
+                               
+
+$defaultpostdurationyear = "20";
+
+
+@postdurationname=("oneweek", "twoweeks", "onemonth", "twomonths", "threemonths",
+                                                       "sixmonths", "oneyear", "twoyear", "threeyear",
+                                                       "nonexpire");
+
+$defaultpostdurationname = "nonexpire";
+
+
+@adpricearray=("0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00");
+
+$defaultadprice = ("0.00");
+
+
+@picpricearray=("1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00");
+                        
+
+$defaultpicprice= "1.00";
+
+#$taxrate{"kc"} = ("0.07525");
+$taxrate{"kc"} = ("0.0825");
+
+}
+
+
+1; #return true
